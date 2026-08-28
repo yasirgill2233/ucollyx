@@ -1,0 +1,8 @@
+.env
+.env.prod
+
+node_modules
+
+user_projects
+
+uploads

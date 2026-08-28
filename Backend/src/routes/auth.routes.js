@@ -1,0 +1,16 @@
+const express = require('express');
+const router = express.Router();
+const authController = require('../controllers/auth.controller');
+const { protect } = require('../middleware/auth.middleware');
+const { registerSchema } = require('../validators/auth/auth.validation');
+const validate = require('../middleware/validate.middleware');
+
+router.post('/register', validate(registerSchema), authController.signup);
+router.post('/verify-otp', authController.verifyOTP);
+router.post('/login', authController.login);
+router.post('/google', authController.googleLogin);
+router.post('/resend-otp', authController.resendOTP);
+router.put('/change-password', protect, authController.updatePassword);
+router.post('/select-workspace', protect, authController.selectWorkspace);
+
+module.exports = router;
