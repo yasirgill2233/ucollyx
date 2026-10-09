@@ -11,6 +11,7 @@ Before you begin, ensure you have the following installed on your system:
 *   [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 *   [Git](https://git-scm.com/)
 *   Database (MySQL)
+*   Docker
 
 ---
 
